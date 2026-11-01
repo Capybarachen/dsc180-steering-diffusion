@@ -13,7 +13,7 @@ on small subsets of CIFAR-10; and trains a CFG network on MNIST.
 On a machine with an NVIDIA GPU (a DSMLP GPU or Colab):
 
 ```bash
-git clone https://github.com/<your-username>/<this-repo>.git
+git clone https://github.com/Capybarachen/dsc180-steering-diffusion.git
 cd <this-repo>
 pip install -r requirements.txt     # on DSMLP: pip install --user -r requirements.txt
 python run.py samples               # parts 1–3 sample grids; the first run downloads about 720 MB
@@ -86,7 +86,7 @@ past a failed target. `kubectl get pods` lists your containers, `kubectl logs -f
 Choose a GPU runtime (Runtime → Change runtime type), then in a cell:
 
 ```
-!git clone https://github.com/<your-username>/<this-repo>.git
+!git clone https://github.com/Capybarachen/dsc180-steering-diffusion.git
 %cd <this-repo>
 !pip install -q -r requirements.txt
 !python run.py samples
