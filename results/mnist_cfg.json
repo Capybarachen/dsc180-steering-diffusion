@@ -1,0 +1,118 @@
+{
+  "training": {
+    "updates": 30000,
+    "batch": 128,
+    "lr": 0.0002,
+    "ema": 0.999,
+    "label_dropout": 0.1,
+    "channels": 64,
+    "seed": 0,
+    "final_loss_mean_of_last_1000": 0.059154030352830886
+  },
+  "evaluation": {
+    "samples_per_w": 10000,
+    "sampler_steps": 16,
+    "fid_reference_digits": 60000
+  },
+  "rows": [
+    {
+      "model": "ours, 30,000 updates",
+      "w": 0,
+      "images": 10000,
+      "network calls per image": 16,
+      "label accuracy": 0.1059,
+      "confidence": 0.10519032837152481,
+      "FID": 58.30248186129302,
+      "FID_class": null,
+      "pixel spread": 0.24444406777620314
+    },
+    {
+      "model": "ours, 30,000 updates",
+      "w": 1,
+      "images": 10000,
+      "network calls per image": 16,
+      "label accuracy": 0.9828,
+      "confidence": 0.9809572328567505,
+      "FID": 7.341880508044596,
+      "FID_class": 20.892370024364254,
+      "pixel spread": 0.19302839338779448
+    },
+    {
+      "model": "ours, 30,000 updates",
+      "w": 2,
+      "images": 10000,
+      "network calls per image": 32,
+      "label accuracy": 1.0,
+      "confidence": 0.9998966715812683,
+      "FID": 60.60470467848609,
+      "FID_class": 134.6618290275402,
+      "pixel spread": 0.17784718200564384
+    },
+    {
+      "model": "ours, 30,000 updates",
+      "w": 4,
+      "images": 10000,
+      "network calls per image": 32,
+      "label accuracy": 1.0,
+      "confidence": 0.9999961729049682,
+      "FID": 133.6958024132855,
+      "FID_class": 259.70817997941293,
+      "pixel spread": 0.17248630225658418
+    },
+    {
+      "model": "course generator, 96,000 updates",
+      "w": 0,
+      "images": 10000,
+      "network calls per image": 16,
+      "label accuracy": 0.1055,
+      "confidence": 0.10631140993833542,
+      "FID": 28.723396461164157,
+      "FID_class": null,
+      "pixel spread": 0.24613575786352157
+    },
+    {
+      "model": "course generator, 96,000 updates",
+      "w": 1,
+      "images": 10000,
+      "network calls per image": 16,
+      "label accuracy": 0.9861,
+      "confidence": 0.9844799649238587,
+      "FID": 5.906895118103421,
+      "FID_class": 16.057059972839717,
+      "pixel spread": 0.19434791430830956
+    },
+    {
+      "model": "course generator, 96,000 updates",
+      "w": 2,
+      "images": 10000,
+      "network calls per image": 32,
+      "label accuracy": 1.0,
+      "confidence": 0.9999065996170043,
+      "FID": 48.186998452078114,
+      "FID_class": 111.31286081570185,
+      "pixel spread": 0.18031168282032012
+    },
+    {
+      "model": "course generator, 96,000 updates",
+      "w": 4,
+      "images": 10000,
+      "network calls per image": 32,
+      "label accuracy": 1.0,
+      "confidence": 0.9999918646812439,
+      "FID": 100.36515119061187,
+      "FID_class": 201.70696712647637,
+      "pixel spread": 0.1762308731675148
+    },
+    {
+      "model": "real test digits",
+      "w": null,
+      "images": 10000,
+      "network calls per image": null,
+      "label accuracy": 0.9932,
+      "confidence": 0.9911577172279358,
+      "FID": 5.584601216100054,
+      "FID_class": 17.41597577768696,
+      "pixel spread": 0.2124045930802822
+    }
+  ]
+}

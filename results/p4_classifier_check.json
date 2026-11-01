@@ -1,0 +1,5 @@
+{
+  "classifier": "ResNet-56 (chenyaofo/pytorch-cifar-models)",
+  "real_test_images": 10000,
+  "accuracy": 0.9437999725341797
+}

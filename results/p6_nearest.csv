@@ -1,0 +1,3 @@
+training images,"median distance, samples","median distance, real test images",samples closer than every test image
+100,1.2525365352630615,23.669099807739258,0.9900000095367432
+1000,13.508411407470703,21.251815795898438,0.05999999865889549
