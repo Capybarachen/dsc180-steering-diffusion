@@ -40,6 +40,28 @@ else:
     QUICK = DEVICE.type != "cuda"
 
 
+def _cpu_limit():
+    """CPUs this container may use. In a DSMLP or Kubernetes container PyTorch sees every core of the machine, and
+    starting that many threads on a few allowed CPUs makes CPU linear algebra (FID's eigendecompositions) crawl."""
+    try:                                                     # cgroup v2
+        quota, period = open("/sys/fs/cgroup/cpu.max").read().split()[:2]
+        if quota != "max":
+            return max(1, int(quota) // int(period))
+    except (OSError, ValueError):
+        pass
+    try:                                                     # cgroup v1
+        quota = int(open("/sys/fs/cgroup/cpu/cpu.cfs_quota_us").read())
+        period = int(open("/sys/fs/cgroup/cpu/cpu.cfs_period_us").read())
+        if quota > 0:
+            return max(1, quota // period)
+    except (OSError, ValueError):
+        pass
+    return len(os.sched_getaffinity(0)) if hasattr(os, "sched_getaffinity") else (os.cpu_count() or 1)
+
+
+torch.set_num_threads(max(1, min(torch.get_num_threads(), _cpu_limit())))
+
+
 # ------------------------------------------------------------------ downloads (the course notebook's code)
 def sha256(path):
     h = hashlib.sha256()
