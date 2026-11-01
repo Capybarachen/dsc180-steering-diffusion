@@ -1,0 +1,14 @@
+# downloads, generated images, snapshots and training runs: large, and remade by the commands in the README
+downloads/
+outputs/
+training-runs/
+logs/
+*.pt
+*.pkl
+*.npz
+
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

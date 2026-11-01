@@ -1,0 +1,12 @@
+# Python 3.10–3.13. Install PyTorch for your GPU first if your environment lacks it (https://pytorch.org);
+# DSMLP's and Colab's GPU environments already have it.
+torch>=2.2
+torchvision          # MNIST
+numpy
+matplotlib
+pandas               # CIFAR-10 from Hugging Face's parquet files
+pyarrow
+pillow
+requests             # EDM's dnnlib, which its pickles need
+click                # EDM's train.py (the full run)
+psutil               # EDM's train.py (the full run)
